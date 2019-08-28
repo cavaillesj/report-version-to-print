@@ -461,7 +461,7 @@ It is useful to consider the measure of variability as long as no collapse has o
 
 
 \paragraph{}
-In practice, we have to make compromise to decrease different sources of possible bias. Even if the dynamics is initialised close to the average values taken by the variables (i.e. the approximations given by eq. \ref{NW1}), it is safer to not take into account the initial part of the time series, to compute collapse probability (thus we do not consider the first $10\%$ of the time series). Also, as explained previously, it is not useful to compute variability after a collapse occurs, but in order to use the same time to measure variability in all simulations, we restrict the computation to the second $10\%$ of the time series (see Fig. \ref{fig:variability2}). Indeed, because the likelihood to collapse in this short range time is low, the bias of collapse should be insignificant (\hyperref[algo_variability]{algorithm in appendix}). %Other ways of measuring variability have been implemented and are detailed in \hyperref[other_variability]{appendix}.
+In practice, we have to make compromise to decrease different sources of possible bias. Even if the dynamics is initialised close to the average values taken by the variables (i.e. the approximations given by eq. \ref{NW1}), it is safer to not take into account the initial part of the time series, to compute collapse probability (thus we do not consider the first $10\%$ of the time series). Also, as explained previously, it is not useful to compute variability after a collapse occurs, but in order to use the same time to measure variability in all simulations, we restrict the computation to the second $10\%$ of the time series (see Fig. \ref{fig:variability2}). Indeed, because the likelihood to collapse in this short range time is low, the bias of collapse should be insignificant (algorithm in appendix \ref{algo_variability}). %Other ways of measuring variability have been implemented and are detailed in \hyperref[other_variability]{appendix}.
 
 \begin{figure}[h!]
 \centering
@@ -1555,11 +1555,11 @@ Also we represent the phase portrait for both $N$ and $W$. We recall that the dy
 
 
 
-\subsection{Particular point}
-\label{equi}
+%\subsection{Particular point}
+
 
 \subsection{Equilibrium}
-
+\label{equi}
 \paragraph{}
 We want to determine the equilibrium point for the deterministic part :
 \[
@@ -1792,7 +1792,7 @@ Also, we can remark that the final time change the value of the collapse probabi
 \label{average}
 
 \paragraph{}
-in order to not have to run too long simulation, an average of both $N$ and $W$ is estimated. It help to initialise the dynamics, indeed the transitions time is shorter
+In order to not have to run too long simulation, an average of both $N$ and $W$ is estimated. It help to initialise the dynamics, indeed the transitions time is shorter
 %\todo{ ? ? ? (plot time series in appendices, to compare if we take the initial point [1.,0] or $[1,\frac{m}{d}]$ explain that in this case we need to have long enough simulation especially if $d$ the recovery rate is too small)}
 
 We use the following model :
@@ -1914,11 +1914,32 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 
 
 \newpage
-\section{Variability}
+\section{Variability algorithm}
 
-\subsection{algo variability}
+%\subsection{algo variability}
 \label{algo_variability}
-\todo{algo variability}
+%\todo{algo variability}
+
+
+
+\begin{algorithm}
+\caption{Variability}
+\begin{algorithmic}
+\REQUIRE $Time\_series\_for\_each\_simulations$
+\ENSURE $variability\_approximation$
+\STATE $c=0$
+\FOR{$i=1$ \TO $simulation\_number$}
+    \IF{$Time\_series[i]$ do not collapse before $t=0.2$ of the $final\_time$}
+        \STATE $c = c + 1$
+        \STATE $variability\_approximation$ = $variability\_approximation$ + variance(biomass between $10\%$ and $20\%$ of the final time study} 
+    \ENDIF
+\ENDFOR
+\STATE $variability\_approximation = \frac{variability\_approximation}{c}$
+\end{algorithmic}
+\end{algorithm}
+
+
+
 
 
 
@@ -1928,21 +1949,82 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 
 
 \newpage
-\section{variability estimation}
-\subsection{variability estimation derivation}
+\section{Variability estimation}
+%\subsection{variability estimation derivation}
 \label{variability_estimation}
-\todo{variability estimation}
+%\todo{variability estimation}
 
 %\subsection{variability estimation other}
 %\label{variability_estimation_other}
 %\todo{variability estimation other}
 
 
+Here, we want to estimate the variability of $N$. For this, we use the following derivation.
+Firstly, we still assume that $f$ is high and $s$ low. 
+\\
+We denote $U$ the growth rate of $N$ at the equilibrium $N$. \\
+The growth of $N$ is driven by  
+\[
+\frac{dN}{dt} = N(1-N)(N-A)
+\]
+Which is simply the first equation of the model without the perturbation term.
+We use the notation
+\[
+X = N-1
+\]
+Thus the previous equation becomes
+\[
+\begin{array}{rcl}
+\frac{dX}{dt} & = & (X+1)X(X+1-A) \\
+& = & 1.X(1-A) + o_0(X) \\
+\end{array}
+\]
+Finally, we have a growth rate 
+\[
+U = 1-A
+\]
+Also we denote, $\lambda$ the average severity of a fire. The derivation of $\lambda$ is more complex and will be studied further.
+
+%In order to estimate the variability, we assume that $f$ is high enough to make decompose the variability as the product of the frequency and the perturbations.
+Because, the strength is low, the frequency is high, according to \cite{zelnik2018impact} we can estimate the variability by : 
+\[
+\begin{array}{rcl}
+Variability & = & f\frac{\lambda^2}{U}
+\end{array}
+\]
+Thus, the main difficulty to estimate the variability is to approximate $\lambda$. An important point is that when no fuel is present the fire stop. This implies that the actual average of the strength is lower than $s$. In order to consider this point, we calculate again the average of the perturbation. To have a fire we need that to have more fuel than the biomass burned :
+\[
+\begin{array}{rcl}
+W^{av} & > & s\beta(N^{av}+\alpha W^{av}) \\
+s & < & \frac{W^{av}}{\beta(N^{av}+\alpha W^{av})} \\
+\end{array}
+\]
+In order to respect this threshold, we can simply redefine $\lambda$ as 
+\[
+\lambda = min(\{s(N^{av}+\alpha W^{av}), \frac{W^{av}}{\beta s (N^{av}+\alpha W^{av})}\})
+\]
+
+
+
+
 
 \newpage
-\section{cp derivation}
+\section{Collapse probability estimation}
 \label{cp_derivation}
-\todo{}
+%\todo{}
+
+\paragraph{}
+We want to estimate $cp1$ : the risk to collapse with only one fire. To do this we consider the exponential distribution of the strength, and integrate between $N^*-a$ and $\frac{W^*}{\beta}$. The first term is the quantity of biomass needed to go from the average $N^{av}$ to $A$ the Allee threshold effect, in order to collapse the system. And the second term is the maximum severity of the fire allowed by the fuel level (by assuming that it is closed to $W^{av}$).
+
+\[
+\begin{array}{rcl}
+cp1 &=& \int_{N^*-a}^{\frac{W^*}{\beta}}s(x)(N^*+\alpha W^*)dx \\
+&=& \int_{N^*-a}^{\frac{W^*}{\beta}} \frac{x}{s}\exp(-\frac{x}{s})(N^*+\alpha W^*)dx \\
+&=& (N^*+\alpha W^*)([-x\exp(-\frac{x}{s})]_{N^*-a}^{\frac{W^*}{\beta}} +  [ -s\exp(-\frac{x}{s})]_{N^*-a}^{\frac{W^*}{\beta}}) \\
+&=& (N^*+\alpha W^*)((N^*-a)\exp(-\frac{N^*-a}{s}) - \frac{W^*}{\beta}\exp(-\frac{W^*}{s\beta}) + s(\exp(-\frac{N^*-a}{s})- \exp(-\frac{W^*}{s\beta})) \\
+cp1 &=& (N^*+\alpha W^*)((N^*-a+s)\exp(-\frac{N^*-a}{s}) - (\frac{W^*}{\beta}+s)\exp(-\frac{W^*}{s\beta}) \\
+\end{array}
+\]
 
 
 

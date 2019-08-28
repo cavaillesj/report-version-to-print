@@ -93,12 +93,12 @@
 \vspace*{1.9cm}
 
 \begin{flushleft}
-Supervisor : Yuval Zelnik \footnote{\url{yuval.zelnik@sete.cnrs.fr}} \hfill
-Tutor : Marie-Hélène Vignal \footnote{\url{marie-helene.vignal@math.univ-toulouse.fr}} \\  
+Supervisor: Yuval Zelnik \footnote{\url{yuval.zelnik@sete.cnrs.fr}} \hfill
+Tutor: Marie-Hélène Vignal \footnote{\url{marie-helene.vignal@math.univ-toulouse.fr}} \\  
 Michel Loreau \footnote{\url{michel.loreau@sete.cnrs.fr}} \hfill
 Charles Dossal \footnote{\url{dossal@insa-toulouse.fr}} \\
-Laboratory : CNRS-Moulis \footnote{2, route du CNRS - 09200 Moulis, France, \url{http://www.cbtm-moulis.com}} \hfill 
-University : INSA Toulouse \footnote{135, Avenue de Rangueil 31077 Toulouse Cedex 4, \url{http://www.insa-toulouse.fr}} \\
+Laboratory: CNRS-Moulis \footnote{2, route du CNRS - 09200 Moulis, France, \url{http://www.cbtm-moulis.com}} \hfill 
+University: INSA Toulouse \footnote{135, Avenue de Rangueil 31077 Toulouse Cedex 4, \url{http://www.insa-toulouse.fr}} \\
 \hfill Paul Sabatier \footnote{118 route de Narbonne, 31062 Toulouse Cedex 9, \url{http://www.univ-tlse3.fr/}}
 \end{flushleft}
 
@@ -206,7 +206,7 @@ However, the most unique facility of the station is the metatron\footnote{\url{h
 \includegraphics[width=6.cm]{metatron_0.jpg}
 \includegraphics[width=6.cm]{aquatron.png}
 \end{center}
-\caption{\label{fig:temp}Left : Metatron, right : Aquatron}
+\caption{\label{fig:temp}Left: Metatron, right: Aquatron}
 \end{figure}
 
 %% YZ: There's also the aqua-tron, that has recently been finished. You can talk to several people in Jose's team about it, if you're interested.
@@ -440,7 +440,7 @@ In Fig. \ref{fig:collapse}. we show a single simulation where a collapse has occ
 
 \end{figure}
 
-%However, it will depend on the time study used. Indeed, more the time study is long, the more is the risk to collapse. Even if it could be enough to used always the same time study, we present an improvement of this measure : probability to collapse by time unit. This upgrade is thus independent of the time study choose (details in \hyperref[proba_per_time_unit]{appendix}).
+%However, it will depend on the time study used. Indeed, more the time study is long, the more is the risk to collapse. Even if it could be enough to used always the same time study, we present an improvement of this measure: probability to collapse by time unit. This upgrade is thus independent of the time study choose (details in \hyperref[proba_per_time_unit]{appendix}).
 
 
 \label{variability}
@@ -575,7 +575,7 @@ variability = f\frac{\lambda^2}{U}
 \end{figure}
 
 \paragraph{}
-The precision of this estimation depends greatly on the parameters values. For example, we can see in Fig. \ref{fig:vargood} an example where the estimation worked well, while in Fig. \ref{fig:varbad} the estimation is less accurate. Specifically, while in Fig. \ref{dif:varbad} the general behavior is captured well, the specific values are overestimated.
+The precision of this estimation depends greatly on the parameters values. For example, we can see in Fig. \ref{fig:vargood} an example where the estimation worked well, while in Fig. \ref{fig:varbad} the estimation is less accurate. Specifically, while in Fig. \ref{dif:varbad} the general behaviour is captured well, the specific values are overestimated.
 Generally, when the total severity of the fire is high, the accuracy of the estimation decreases. In practice, the product of the parameter $s.\alpha.\beta$ give an interesting clue of the precision of the variability estimation.
 %Other estimation of variability have been implement and are presented in \hyperref[variability_estimation_other]{appendix}.
 
@@ -701,11 +701,11 @@ P(s(N+\alpha W) > N-a ) & = & P(s(1+\alpha \frac{m}{d}) > 1-a ) \\
 
 
 \paragraph{}
-It is useful to note that for some set of parameters it is impossible to have a collapse from a single fire event because there is never enough fuel to maintain a fire strong enough to lead to the collapse of the forest. We will place this particular situation at the beginning of the axis.
+It is useful to note that for some  parameter values it is impossible to have a collapse from a single fire event because there is never enough fuel to maintain a fire strong enough to lead to the collapse of the forest. We will place this particular situation at the beginning of the axis.
 
 %We now consider the equilibrium point $(1, \frac{m}{d}$) because it is when both $N$ and $W$ are higher and thus the total severity of the fire is higher too.
 
-We still consider to be close to the equilibrium point $(1, \frac{m}{d}$).
+Here again we consider the system to be close to its equilibrium point $(1, \frac{m}{d}$).
 \[
 \left\lbrace
 \begin{array}{rcl}
@@ -714,7 +714,7 @@ We still consider to be close to the equilibrium point $(1, \frac{m}{d}$).
 \end{array}
 \right.
 \]
-Thus, the quantity burned in only one fire can not be higher than $\frac{m}{d}$. \\
+Thus, the quantity burned in a single fire cannot be higher than $\frac{m}{d}$. \\
 Formally,
 \[
 \begin{array}{crcl}
@@ -731,14 +731,13 @@ For the first equation (for $N$) we have a collapse only if
 \Leftrightarrow &  \frac{m}{d( 1-a)} & > & \beta \\ 
 \end{array}
 \]
-Thus, if this condition is not respected (in practice when $\beta$ is high enough) it is impossible to have a collapse. We can see below  an example when the lack of $W$ prevent the collapse of the forest.
-
+Thus, if this condition is not respected (in practice when $\beta$ is high enough) it is impossible to have a collapse. We can see in Fig. \ref{fig:nevercollapse} an example where the lack of $W$ prevents the collapse of the forest.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=11cm]{return_never_1.png}
-\caption{For this set of parameter, even for a strong fire, fuel is too low to maintain a fire able to collapse the system}
-%\label{fig:universe}
+\caption{For this set of parameters, even for a strong fire, fuel is too low to maintain a fire from leading to a system collapse.}
+\label{fig:nevercollapse}
 \end{figure}
 
 
@@ -747,13 +746,11 @@ In conclusion, the second axis is constructed by the severity of the fire compar
 \[
 \exp(-\frac{1-a}{s(1+\alpha\frac{m}{d})})
 \]
-and for some specimen when the fuel is not enough to maintain a fire, when the following expression is not respected,
+and for some scenarios when the fuel is not sufficient to maintain a fire, when the following expression is not respected,
 \[
 \frac{m}{d( 1-a)} > \beta
 \]
-the specimen is constrained to be at the lower level of the axis.
-
-
+the scenario is constrained to be at the lower level of this axis.
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -771,26 +768,22 @@ the specimen is constrained to be at the lower level of the axis.
 %a= 0.02 , m= 0.5 , d= 0.015625 , strength= 0.01 , alpha= 10 , beta= 2.0 % clock
 
 \paragraph{}
-We being by considering the possible dynamics that can occur in our model. Here, by changing only the value of $d$, in particular, the frequency remain the same, we have three time series with different general behaviour.
+We begin by considering the possible dynamics that can occur in our model. As seen in Fig. \ref{fig:dynexample}, by changing the value of the decay of dead wood $d$ (and in particular with the same fire frequency) we can see that the ecosystem behaviour can greatly change.
 
-In the first one, the recovery after a fire is slow and the level of fuel is usually high which allow the system to collapse. For another example, the recovery is still slow, however, the level of fuel remain lower thus the system can resist to collapse. In the last illustration, the recovery is fast, and because the level of fuel is too low, a fire could not collapse the system.
-
-By changing only one parameter, we have different dynamical behaviour, and different consequences for variability and collapse probability.
+In the top panel, the recovery $N$ after a fire is slow and the level of fuel $W$ is typically high, which together often leads the system to a collapse. For the middle panel, while the recovery is still slow, the level of fuel is typically lower, so that most fires do not lead to a collapse. In the last illustration, the decay of $W$ is so fast that a single fire cannot lead to a collapse, and overall a collapse is quite unlikely, while the ecosystem typically recovers quite easily from any given fire. Hence, by changing only one parameter, we can have different dynamical behaviour, with corresponding consequences for variability and collapse probability.
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[height = 3.8cm]{results/time_series_2.png}
-\includegraphics[height = 3.8cm]{results/time_series_3.png}
-\includegraphics[height = 3.8cm]{results/time_series_4.png}
+\includegraphics[height = 3.5cm]{results/time_series_2.png}
+\includegraphics[height = 3.5cm]{results/time_series_3.png}
+\includegraphics[height = 3.5cm]{results/time_series_4.png}
 \end{center}
-\caption{\label{fig:temp}Time series with different values of $d$ : $0.0625$, $0.125$ and $0.25$}
+\caption{\label{fig:dynexample}Time series with different values of $d$: $0.0625$, $0.125$ and $0.25$}
 \end{figure}
 % or category or type, kinds 
 % Time series for three different value of $m$ and $\alpha$
 % the general behaviour is different ...
 %Class linear, counter-clockwise and clockwise
-
-
 
 \newpage
 
@@ -805,77 +798,68 @@ By changing only one parameter, we have different dynamical behaviour, and diffe
 %Because we want to explore exhaustively the different dynamics cases, we introduce a coefficient to distinguish typical cases. Different \hyperref[other_ratio]{others coefficients} have been tested but only the following is used. After, another axes will be used to subdivide each cases.
 
 \paragraph{}
-Although we see different behaviour by changing only one parameters, the connection is not clear. So we will now try to clarify this by using \hyperref[axes_definition]{previously defined} axes by which we can exhaustively compare all the possible types of dynamics.
+Although we can see different behaviour by changing only one parameter, the connection remains unclear, and moreover, understanding the role of different parameters is quite difficult. We therefore choose to clarify this issue by using \hyperref[axes_definition]{previously defined} axes by which we can exhaustively compare all the possible types of dynamics.
     
-The first axes compare the effect of fuel decay and burning. The first axes is also used to construct the second one : the possibility to collapse.
-
-Below are presented several time series for each subcases, in order to give an idea of the general behaviour for each cases.
-
+The first axis compares the effect of fuel decay and burning. This axis is also used to construct the second axis: the possibility to collapse. From the combination of these two axes we can arrive at a number of cases of dynamical behaviour, as outlined in Fig. \ref{fig:universe}. We present below several time series for each such case, in order to elucidate the typical behaviour for each case.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=12cm]{results/time_series_each_cases.png}
-\caption{Typical dynamical cases along the two axes \textit{accumulation VS depletion} and \textit{possibility to collapse}}
-%\label{fig:universe}
+\caption{Typical dynamical cases along the two axes \textit{accumulation VS depletion} and \textit{possibility to collapse}.}
+\label{fig:universe}
 \end{figure}
-
 
 \newpage
 \subsubsection{Accumulation VS depletion}
 
-
 \paragraph{}
-Indeed, the two previously defined axes could help to distinguish typical dynamical cases. We choose two separate the first axes in three part, by using two threshold ($0.5$ and $20$) for the value of the ratio \textit{AB}. The first part correspond to the cases when fuel accumulate a lot. In this case, fuel have usually time to come back at equilibrium ($W^{eq}=\frac{m}{d}$) before another fire occurs.
+We choose two separate the first axis in three segments, by using two thresholds ($0.5$ and $20$) for the value of the ratio \textit{AB} (as defined in the methods section). The first part correspond to the cases when fuel accumulate substantially. In this case, fuel usually has time to come back to equilibrium ($W^{eq}=\frac{m}{d}$) before another fire occurs. Fig. \ref{fig:casere} shows typical behaviour for these cases.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{return_to_eq_1.png}
 \includegraphics[width=3.9cm]{return_to_eq_2.png}
 \includegraphics[width=3.9cm]{return_to_eq_3.png}
-\caption{Time series for different parameter sets corresponding to the case : Return to equilibrium}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the cases of: Return to equilibrium}
+%\label{fig:casere}
 \end{figure}
 
-
-
 \paragraph{}
-At the opposite, when the ratio called \textit{AB} is high, in another word when fire tend to annihilate the growth of $W$, this one remains low.
+At the opposite end, when the ratio \textit{AB} is high, fire tends to strongly limit the accumulation of $W$. This defines another group of cases, Depletion, with their typical behaviour shown in Fig. \ref{fig:casesdep}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{continue_1.png}
 \includegraphics[width=3.9cm]{continue_2.png}
 \includegraphics[width=3.9cm]{continue_3.png}
-\caption{Time series for different parameter sets corresponding to the case : depletion}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the cases of: Depletion}
+\label{fig:casesdep}
 \end{figure}
 
 
 \paragraph{}
-Between the two previous cases, we define a third cases called \textit{fluctuation}. It happens when the effect of the fire and the growth are about the same quantity. In this case, $W$ can take the larger range of value (from $0$ to $W^{eq}=\frac{m}{d}$).
+Between the two previous groups, we define a third group called \textit{Fluctuation}. This happens when the effect of the fire and the growth are about equal in magnitude. In this situation, as seen in Fig. \ref{fig:casesfluc}, $W$ can take a larger range of value (from $0$ to $W^{eq}=\frac{m}{d}$).
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{middle_1.png}
 \includegraphics[width=3.9cm]{middle_2.png}
 \includegraphics[width=3.9cm]{middle_3.png}
-\caption{Time series for different parameter sets corresponding to the case : fluctuation}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the cases of: Fluctuation}
+\label{fig:casesfluc}
 \end{figure}
-
 
 
 \newpage
 \paragraph{}
-In order to visualise the limit of each cases, examples for each limits are presented.
-For the limit between \textit{accumulation} and \textit{fluctuation} we could see that a fire often occur before the dynamics come back to equilibrium. For the second one, we see that fuel is quite low, but could sometimes take relatively high value.
-
+In order to visualise the limit of each group of cases, examples for the transitions between them are presented.
+For the limit between \textit{Accumulation} and \textit{Fluctuation} (Fig. \ref{fig:casesmid1}) we can see that a fire often occurs before the dynamics come back to equilibrium. For the second one (Fig. \ref{fig:casesmid2}), we see that fuel is quite low, but could sometimes take relatively high value.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{lim_eq_middle_1.png}
 \includegraphics[width=3.9cm]{lim_eq_middle_2.png}
 \includegraphics[width=3.9cm]{lim_eq_middle_3.png}
-\caption{Time series for different parameter sets corresponding to the limit between accumulation and fluctuation}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the limit between Accumulation and Fluctuation.}
+\label{fig:casesmid1}
 \end{figure}
 
 
@@ -884,11 +868,9 @@ For the limit between \textit{accumulation} and \textit{fluctuation} we could se
 \includegraphics[width=3.9cm]{lim_c_middle_1.png}
 \includegraphics[width=3.9cm]{lim_c_middle_2.png}
 \includegraphics[width=3.9cm]{lim_c_middle_3.png}
-\caption{Time series for different parameter sets corresponding to the limit between depletion and fluctuate}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the limit between Depletion and Fluctuation.}
+\label{fig:casesmid2}
 \end{figure}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% subcases %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -899,57 +881,52 @@ For the limit between \textit{accumulation} and \textit{fluctuation} we could se
 
 
 \paragraph{} %\todo{expand ? it is the main paragraph of the subsubsection ... }
-After using the axis \textit{AB} to distinguish several part, we used the axis \textit{possibility to collapse}. Usually, three part could be done, by using a threshold ($0.01$ and $0.2$) to the value of the axis. The first one, called \textit{unlikely collapse}, which comprise the lower value of the axis and the cases where the condition $\frac{m}{d( 1-a)} > \beta$ is not respected. The transitory case called "possible collapse" when the collapse is unpredictable. And, the \textit{inevitable collapse} when the system have a fire could easily collapse the system.
+After using the axis \textit{AB} to distinguish between groups of cases, we now use the axis \textit{possibility to collapse} (see methods) to further separate them into specific dynamical cases. In general, a separation into three parts could be done, by using two thresholds ($0.01$ and $0.2$) to the value of the axis. The first part, called \textit{Unlikely collapse}, comprises the lower value of the axis where the condition $\frac{m}{d( 1-a)} > \beta$ is not respected. The transitory part called "Possible collapse" when the collapse is unpredictable. And finally, the \textit{Inevitable collapse} when any given fire is likely to lead to the system's collapse.
 
-Using the two axis together allow to have a grid of typical dynamical cases. However, the number of this cases is $7$ and not $9$, because for the case $depletion$ in other words the ratio \textit{AB} is high, the level of fuel is too low to allow a fire to  the system. We have not the case \textit{depletion - possible collapse} and surely not \textit{depletion - inevitable collapse}. Nonetheless, let recall that even is the case \textit{unlikely collapse}, the system is still able to collapse, but the risk is very low.
-
-
+Using the two axes together allows us to have a grid of typical dynamical cases, as shown in Fig. \ref{universe}. However, the number of these cases is $7$ and not $9$, when for the case-group $Depletion$ a collapse in always unlikely, leading to only one case in this group. In other words, if the ratio \textit{AB} is high, the level of fuel is too low to allow a fire to collapse the system. We therefore do not expect to have the case \textit{Depletion - Possible collapse}, and certainly not the case \textit{Depletion - Inevitable collapse}. Nonetheless, let us recall that even is the case \textit{Unlikely collapse}, the system is still able to collapse, but rather the risk is very low.
 
 
-\paragraph{accumulation - unlikely collapse\\}
-Below are presented two times series, with two different set of parameter corresponding to the case \textit{accumulation - unlikely collapse}. The left instance correspond at the case where the system not collapse because the condition $\frac{m}{d( 1-a)} > \beta$ is not respected, it could be verified that even is fire are strong, the lack of fuel stop it, and the system survive. The right instance correspond at low severity of the fire, the dynamics have time to come back at equilibrium between two fires.
-
+\paragraph{Accumulation - Unlikely collapse\\}
+Fig. \ref{fig:caseauc} shows two times series, with two different sets of parameters corresponding to the case \textit{Accumulation - Unlikely collapse}. The left instance corresponds to a situation where the system does not collapse because the condition $\frac{m}{d( 1-a)} > \beta$ is not respected. As can be seen, even a fire that is large enough to deplete $W$ entirely cannot lead to the collapse of $N$. The right instance corresponds to low severity of the fire, where usually both $N$ and $W$ have enough time to come back to equilibrium between two fires.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=6cm]{return_never_1.png}
 \includegraphics[width=6cm]{return_never_2.png}
-\caption{Time series for different parameter sets corresponding to the case : Never collapse}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the case: Accumulation - Unlikely collapse.}
+\label{fig:caseauc}
 \end{figure}
 
-
-\paragraph{accumulation - inevitable collapse\\} % always
-For some set of parameter, the system always collapse. Of course, it occurs, when the condition $\frac{m}{d( 1-a)} > \beta$ is respected. Also, the severity of the fire need to be strong enough to collapse. Because the family \textit{accumulation} implies that the dynamics usually return to equilibrium between two fires, the system could collapse only by a single and strong fire, as we can see below.
+\paragraph{Accumulation - Inevitable collapse\\} % always
+For some sets of parameter, the system is certain to collapse. Of course, this occurs when the condition $\frac{m}{d( 1-a)} > \beta$ is respected. Moreover, the severity of the fire needs to be strong enough to lead to a collapse. Because the group \textit{Accumulation} implies that the dynamics usually return to equilibrium between two fires, the system could collapse only by a single strong fire, as we can see below.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{return_always_1.png}
 \includegraphics[width=3.9cm]{return_always_2.png}
 \includegraphics[width=3.9cm]{return_always_3.png}
-\caption{Time series for different parameter sets corresponding to the case : accumulation - inevitable collapse}
+\caption{Time series for different parameter sets corresponding to the case: Accumulation - Inevitable collapse.}
 %\label{fig:universe}
 \end{figure}
 
 
 %\todo{préciser que le temps d'étude n'est pas tjrs suffisant pour le constater}
-\paragraph{accumulation - possible collapse \\} % between
-Between this two extremes cases, exists a range of parameters when a collapse could occur. This happen, when $W$ is high enough and also when the actual strength of the fire is high enough. We could remark that this case depend greatly on the final time used, because this system are able to collapse, but need a strong enough fire. In other words, for a higher time study, the system would have more risk to collapse, because the probability to have a strong fire would be higher.
-
+\paragraph{Accumulation - Possible collapse \\} % between
+Between these two extremes cases, there exists a range of parameters when a collapse may occur (Fig. \ref{caseapc}). This happens when $W$ is high enough and also when the actual strength of the fire sufficiently large. We could remark that this case depends greatly on the final simulation time used, because, while this system is able to collapse, its needs a strong enough fire which is not common. In other words, for a longer time study, the system will have more risk of collapse, because the probability to have a strong fire would be higher.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3.9cm]{return_between_1.png}
 \includegraphics[width=3.9cm]{return_between_2.png}
 \includegraphics[width=3.9cm]{return_between_3.png}
-\caption{Time series for different parameter sets corresponding to the case : accumulation - possible collapse}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the case: Accumulation - Possible collapse.}
+\label{fig:caseapc}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%  \todo{... link with cp (but after) ... } 
 
-\paragraph{depletion \\}
-Following the same idea than previously, when $W$ is always low, collapse can never occurs. In practice, we can observe a collapse only, when the set of parameter is closed to the case \textit{fluctuation}. So, $W$ can go higher enough to generate a fire. But this is observed rarely. On the figure below we can observe that $W$ come back to $0$ with each fire and have no time to accumulate to engender a strong fire.
+\paragraph{Depletion \\}
+When $W$ is always low, a collapse is highly unlikely. In practice, we can observe a collapse only when the set of parameter is close to the cases of \textit{Fluctuation}. Is is then that $W$ can get to higher enough values to generate a substantial fire, but this is rarely observed. In Fig. \ref{cased} we can observe that $W$ comes back to $0$ with each fire and does not have time to accumulate, and thus lead to a strong fire.
 %\todo{jamais collapse, expliquer pourquoi avec un très simple calcul}
 %\todo{nuancer dans le cas ou on est proche du cas "equivalence" and fuel is not always low enough}
 
@@ -957,10 +934,9 @@ Following the same idea than previously, when $W$ is always low, collapse can ne
 \centering
 \includegraphics[width=6cm]{continue_1.png}
 \includegraphics[width=6cm]{continue_2.png}
-\caption{Time series for different parameter sets corresponding to the case : \textit{depletion}}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the case: \textit{Depletion}.}
+\label{fig:cased}
 \end{figure}
-
 
 
 %\subsubsection{"fluctuating"}
@@ -969,26 +945,24 @@ Following the same idea than previously, when $W$ is always low, collapse can ne
 %\todo{illustrate}
 
 \newpage
-\paragraph{fluctuating \\}
-The case called \textit{fluctuating} is the harder to study, justly because $W$ fluctuates a lot, it is thus more difficult to have analytic results. Depending on the value of the ratio \textit{AB}, it could make sense to assimilate this case to the case \textit{accumulate} or \textit{depletion}.
-
+\paragraph{fluctuation \\}
+The cases in the group \textit{Fluctuation} are harder to study, mainly because $W$ values are are strongly vary, and it is thus more difficult to have analytic results. Depending on the value of the ratio \textit{AB}, it could make sense to assimilate this case to the case \textit{Accumulate} or \textit{Depletion}.
 
 \paragraph{}
-When $AB$ is close enough to the limit with the case \textit{depletion}, we could consider that the level remain most of the time low enough to avoid collapse. However, the risk to collapse is here not negligible.
-
+When $AB$ is close enough to the limit with the case \textit{Depletion}, we could consider that the level of $W$ remains low enough most of the time, in order to avoid collapse. However, the risk to collapse here is not negligible, as can be seen in Fig. \ref{fig:casefbyd}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5.5cm]{equivalent_high_1.png}
 \includegraphics[width=5.5cm]{equivalent_high_3.png} \\
 \includegraphics[width=5.5cm]{equivalent_high_2.png}
-\caption{Time series for different parameter sets corresponding to the case : \textit{fluctuation}, but close to \textit{depletion}}
-%\label{fig:universe}
+\caption{Time series for different parameter sets corresponding to the case: \textit{Fluctuation}, but close to \textit{Depletion}.}
+\label{fig:casefbyd}
 \end{figure}
 
 \newpage
 \paragraph{}
-Also, when $AB$ is lower, we have again the same three sub-cases than for the \textit{accumulation} case. We can observe that for this example, the dynamics do not change much.%, and that the extrapolation could make sense (but only if $AB$ is low enough).
+On the other hand, when $AB$ is lower, we again have three similar cases to the \textit{Accumulation} group. We can observe in Fig. \ref{fig:case3fluc} that in this situation, the dynamics do not greatly change.%, and that the extrapolation could make sense (but only if $AB$ is low enough).
 %\todo{ratio low, proche "return", on herite des 3 cas, never always, between}
 %\todo{illustrer 3 exemples pour chaque cas}
 
@@ -999,18 +973,16 @@ Also, when $AB$ is lower, we have again the same three sub-cases than for the \t
 \includegraphics[width=6cm]{equivalent_low_never_2.png}
 \includegraphics[width=6cm]{equivalent_low_never_3.png} \\
 \includegraphics[width=6cm]{equivalent_low_between_2.png}
-\caption{From left to right : fluctuating - unlikely collapse, fluctuating - possible collapse and fluctuating - inevitable}
-%\label{fig:universe}
+\caption{From left to right: Fluctuation - Unlikely collapse, Fluctuation - Possible collapse and Fluctuation - Inevitable collapse.}
+\label{fig:case3fluc}
 \end{figure}
-
-
 
 %\begin{figure}[h!]
 %\centering
 %\includegraphics[width=3.9cm]{equivalent_low_never_1.png}
 %\includegraphics[width=3.9cm]{equivalent_low_never_2.png}
 %\includegraphics[width=3.9cm]{equivalent_low_never_3.png}
-%\caption{Time series for different parameter sets corresponding to the case : fluctuating - unlikely collapse}
+%\caption{Time series for different parameter sets corresponding to the case: fluctuating - unlikely collapse}
 %\label{fig:universe}
 %\end{figure}
 
@@ -1022,11 +994,9 @@ Also, when $AB$ is lower, we have again the same three sub-cases than for the \t
 %\includegraphics[width=3.9cm]{equivalent_low_always_1.png}
 %\includegraphics[width=3.9cm]{equivalent_low_always_2.png}
 %\includegraphics[width=3.9cm]{equivalent_low_always_3.png}
-%\caption{Time series for different parameter sets corresponding to the case : fluctuating - possible collapse}
+%\caption{Time series for different parameter sets corresponding to the case: fluctuating - possible collapse}
 %\label{fig:universe}
 %\end{figure}
-
-
 
 %\paragraph{}
 
@@ -1034,11 +1004,9 @@ Also, when $AB$ is lower, we have again the same three sub-cases than for the \t
 %\centering
 %\includegraphics[width=6cm]{equivalent_low_between_1.png}
 %\includegraphics[width=6cm]{equivalent_low_between_2.png}
-%\caption{Time series for different parameter sets corresponding to the case : fluctuating - inevitable}
+%\caption{Time series for different parameter sets corresponding to the case: fluctuating - inevitable}
 %\label{fig:universe}
 %\end{figure}
-
-
 
 
 \newpage
@@ -1047,86 +1015,71 @@ Also, when $AB$ is lower, we have again the same three sub-cases than for the \t
 \label{impact_freq}
 
 \paragraph{}
-One of our major focus is to study the impact of frequency over variability and collapse probability. We study this for each of the seven dynamical cases defined previously, with an appropriate range of value of frequency.
+One major focus of this study is to look at the impact of frequency over variability and collapse probability. We study this for each of the seven dynamical cases defined previously, with an appropriate range of frequency values.
 
 \paragraph{}
-We begin with the dynamical case called \textit{accumulate - unlikely collapse}. The red font is used to mark the dynamical case \textit{accumulate} the yellow correspond to \textit{fluctuation}. We could see that the variability increase whit the frequency, however, collapse probability remains null. We can remark that the estimation (the continuous line) work reasonably well. 
-
+We begin by looking at the dynamical case called \textit{Accumulation - Unlikely collapse}, as shown in Fig. \ref{fig:vcp1}. The red background is used to mark the dynamical case \textit{Accumulation}, while the yellow corresponds to \textit{Fluctuation}. We can see that the variability increases with the frequency, however, collapse probability remains negligible. We can remark that the estimation (the continuous line) work reasonably well in this situation.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=9cm]{results/measures_acc_unlikely.png}
 \end{center}
-\caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : accumulate - unlikely collapse}
+\caption{\label{fig:vcp1}Variability and collapse probability as a function of fire frequency for the dynamical cases: Accumulation - Unlikely collapse and Fluctuation - Unlikely collapse.}
 \end{figure}
 
 
 \paragraph{}
-Here, the collapse probability is still null. The is firstly increasing, following the behaviour of the case \textit{accumulate - unlikely collapse} and decrease after, when we approaching the \textit{depletion} dynamical case.
-
+If we start with a fluctuation case for low frequencies, as in Fig. \ref{fig:vcp2}, the collapse probability is still zero. Here the variability first increases, following the behaviour of the case \textit{Accumulation - Unlikely collapse} and decrease for higher frequencies, when we approach the \textit{Depletion} dynamical case.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=9cm]{results/measures_fluctu_unlikely.png} \\
 \end{center}
-\caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : fluctuation - unlikely collapse}
+\caption{\label{fig:vcp2}Variability and collapse probability as a function of fire frequency for the dynamical cases: Fluctuation - Unlikely collapse.}
 \end{figure}
 
-
 \paragraph{}
-When frequency is high enough, $AB$ take high value, and the fuel is constrain to low value. The two measures are decreasing quickly. Depending on the parameter set, collapse probability could already be null, or crash in the depletion dynamical case.
+When frequency is high enough, $AB$ take high values, and the fuel is constrained to low values. This means that the two measures are quickly decreasing. Depending on the parameter set, collapse probability could already be zero, or crash in the Depletion dynamical case (Fig. \ref{fig:vcp3}).
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=9cm]{results/measures_depletion.png}
 \end{center}
-\caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : depletion}
+\caption{\label{fig:vcp3}Variability and collapse probability as a function of fire frequency for the dynamical cases: Depletion.}
 \end{figure}
 
 
 \paragraph{}
-For the two dynamical case \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse} both variability and collapse probability are increasing.
-
-To clarify, even in the dynamical case \textit{accumulation - inevitable collapse} the collapse probability could be low because they are not enough fire in the time study to have the risk to collapse the system.
+For the two dynamical cases \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse} both variability and collapse probability are increasing (Fig. \ref{vcp4}). To clarify, even in the dynamical case \textit{Accumulation - Inevitable collapse} the collapse probability could be low because there isn't enough fire in the time study to have a substantial risk of system collapse.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=6cm]{results/measures_acc_possible.png}
 \includegraphics[width=6cm]{results/measures_acc_inevitable.png} 
 \end{center}
-\caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : Left \textit{accumulation - possible collapse}, Right \textit{accumulation - inevitable collapse}}
+\caption{\label{fig:vcp4}Variability and collapse probability as a function of fire frequency for different dynamical cases. Left \textit{Accumulation - Possible collapse}; Right \textit{Accumulation - Inevitable collapse}.}
 \label{acc_possible_and_inevitable}
 \end{figure}
 
-
-
 \paragraph{}
-For the two dynamical case \textit{fluctuation - possible collapse} and \textit{fluctuation - inevitable collapse} both variability and collapse probability are firstly increasing and after decreasing. 
-
-
+For the two dynamical cases \textit{Fluctuation - Possible collapse} and \textit{Fluctuation - Inevitable collapse}, both variability and collapse probability first increase and later decrease at higher frequencies (Fig. \ref{vcp5}). 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=6cm]{results/measures_fluctuation_possible.png} \includegraphics[width=6cm]{results/measures_fluctuation_inevitable.png}
 \end{center}
-\caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : Left \textit{fluctuation - possible collapse}, Right \textit{fluctuation - inevitable collapse}}
+\caption{\label{fig:vcp5}Variability and collapse probability as a function of fire frequency for different dynamical cases. Left \textit{Fluctuation - Possible collapse}, Right \textit{Fluctuation - Inevitable collapse}}
 \end{figure}
-
-
 
 
 
 \newpage
 \label{transition}
 \paragraph{}
-Inside each dynamical case, frequency affect both variability and collapse probability. Because $AB$ depend of frequency, changed this one could implies a changed of dynamical case. In order to study the effect of frequency across dynamical cases, we study the transition to one dynamical case to another one.
-
-To do this, we compute the probability to change the dynamical case if the frequency is doubled. We have the following matrix transition.
-
+Within each dynamical case, frequency affect both variability and collapse probability. Because $AB$ depends on frequency, changing this parameter could imply a transition between dynamical cases. In order to study the effect of frequency across dynamical cases, we study the transition from one dynamical case to another. To do this, we compute the probability to change the dynamical case if the frequency is doubled. This gives us the transition matrix shown in table \ref{tab:transition}.
 
 %\paragraph{}
 %Previously, the frequency range used was choose to remains in the same sub cases. Now, we want to know what happens when the frequency range is higher. To do this, we study the transition of subcases when we double the frequency. 
-
 %We can see that the ability to collapse in one fire do not change, however, the ratio change, and thus, doubling the frequency could change the dynamical cases for axis 1 but not for axis 2. \todo{reformulate}
 
 
@@ -1155,24 +1108,17 @@ To do this, we compute the probability to change the dynamical case if the frequ
         \hline
     \end{tabular}
     \caption{Transition matrix}
-%    \label{tab:my_label}
+    \label{tab:transition}}
 \end{table}
 
-
-
-
 \paragraph{}
-Now, the frequency ranged used is consequently higher. We focus on the general effect of changing frequency to the two measures. We could check below that for the extremes (low value of frequency and high value of frequency) both measures are very small, and they are higher for an intermediate value of frequency.
-
-
+We focus on the general effect of changing frequency on the two measures, variability ad collapse probability, across the different dynamical cases. This is presented in Fig. \ref{fig:loops}, which shows four different possible outcomes to increasing fire frequency on the change in both measures.
+In general we see that for the extremes (very low and very high frequencies) both measures are very small, and they are higher for an intermediate value of frequency.
 
 %Depending on the parameter set choose, the dynamics is different and therefore, the variability and the collapse probability do not react similarly. On the first one, variability and cp first increase together and after decrease (the decreasing part is not always present). On the second one, the two measure are also increasing and decreasing but not in the same time, more surprisingly cp increase before variability. However, in the last class presented, the loop is clockwise.
 
-
 \paragraph{}
-Depending on the parameter set choose, the dynamics is different and therefore, the variability and the collapse probability do not react similarly. On the first one, collapse probability and variability increase together, after variability remain constant but collapse probability decrease. On the second one, the two measure are increasing and decreasing but not in the same time, more surprisingly cp increase before variability. With the third example, variability and cp first increase together and after decrease (the decreasing part is not always present). In the last illustration presented, the loop is clockwise, which is a uncommon.
-
-
+Depending on the parameter set chosen, the overall trajectory can take markedly different shapes in the variability-collapse probability plane. In the top-left panel, collapse probability and variability initially increase together, but collapse probability start decreasing for lower frequencies, creating a circular loop shape. For the top-right panel, as well as the bottom-left one, the loop structure us quite different, in particular since collapse probabilities to get high values. In particular, for the bottom-left case the relation between the two measures is almost linear. Finally, in the bottom-right panel we see a clockwise loop (i.e. variability decreases before collapse probability does so), which is relatively uncommon.
 
 \begin{figure}[h!]
 \begin{center}
@@ -1184,10 +1130,9 @@ Depending on the parameter set choose, the dynamics is different and therefore, 
 %\includegraphics[width=10cm, height = 4.2cm]{case_triangular.png}
 %\includegraphics[width=10cm, height = 4.2cm]{case_clockwise.png}
 \end{center}
-\caption{\label{fig:temp}Different examples of the relationship of variability and collapse probability} % or category or type, kinds
-\label{fig_loop}
+\caption{Different examples of the relationship of variability and collapse probability. % or category or type, kinds
+\label{fig:loops}}
 \end{figure}
-
 
 
 %\todo{plot in results the graph with var and cp increasing with same fire and same time, to validate the results}
@@ -1201,15 +1146,11 @@ Depending on the parameter set choose, the dynamics is different and therefore, 
 \subsubsection{fuel removal}
 \label{fuel_removal}
 \paragraph{}
-Now, we want to study the impact of the parameter $d$ to the variability and collapse probability of the system. To do this, we repeat the study for the three main "dynamical cases". Indeed, the second axes used to subdivide each cases use the notion of "collapse probability", which it make more sense here to measures it than to estimate it. 
+We now want to study the impact of the parameter $d$, the decay of dead wood, on the variability and collapse probability of the system. To do this, we repeat the study for three groups of dynamical cases (we use only the main axis of \textit{Accumulation VS Depletion}). This is since the second axis is itself related to the notion of collapse probability, and therefore it is more straightforward to directly measures the collapse probability from simulation than to estimate it. In practice, we choose for each case a set of parameters so that we can vary the value of $d$ while remaining in the same dynamical case.
 
-In practice, we choose for each case a set of parameter in order to have be able to varies the value of $d$ while remaining in the same dynamic cases.
+We can see that for each dynamics case, increasing $d$ decreases variability and collapse probability (Fig. \ref{fig:changed}). This is intuitive, because increasing $d$ decreases the value of $W^{av}$, the average of dead wood in the system.  If the decay of the dead wood is higher, the density of the dead wood tends to be lower. The consequences is that the fire no longer has enough fuel to trigger a collapse and the variability is lower because $W$ always takes small values.
 
-We can see that for each dynamics cases, increase $d$ decrease variability and collapse probability. This make sense, because increasing $d$ decrease the value of the $W^*$ the average of $W$. In practise it is clearly intuitive, if the decay of the dead wood is higher, the density of the dead wood tend to be lower. The consequences is that the fire have not anymore enough fuel to trigger a collapse and the variability is lower because $W$ take always small value.
-
-However, if in the case "AB" variability and collapse probability are similar, for the case "fluctuating" variability decrease slower and after collapse probability. Also, in the case "fuel low", the variability decrease even if the collapse probability remains null.
-
-
+However, if in the case \textit{Accumulation} variability and collapse probability are similar, while for the case \textit{Fluctuation} variability decreases slower than collapse probability. Also, in the case \textit{Depletion}, the variability decreases even if the collapse probability remains zero.
 
 \begin{figure}[h]
 \begin{center}
@@ -1217,11 +1158,8 @@ However, if in the case "AB" variability and collapse probability are similar, f
 \includegraphics[width=6cm]{results/equivalent_1.png}
 \includegraphics[width=6cm]{results/fuel_low_1.png}
 \end{center}
-\caption{\label{fig:temp}Impact of $d$, from left to right : "return to equilibrium, "fluctuating" and "fuel low"}
+\caption{\label{fig:temp}Impact of $d$, from left to right: \textit{Accumulation}, \textit{Fluctuating} and \textit{Depletion}. \label{fig:changed}}
 \end{figure}
-
-
-
 
 
 \newpage
@@ -1231,20 +1169,15 @@ However, if in the case "AB" variability and collapse probability are similar, f
 
 
 \paragraph{}
-We now focus on the drought scenarios. This is a current subject (a lot of recent papers about this). This is mainly a consequence of extreme weather as a result of climate changed. 
+We now focus on the drought scenarios. This is a current subject in ecological research, with many recent papers studying this topic. The main focus is on the consequences of extreme weather as a result of climate change. 
 
-It have been shown that drought increase the mortality rate of the forest \citep{bradstock_biogeographic_2010}. In our model, the parameter $m$ increase. However, the main consequences of drought is an increase of the strength of fire, notably because the alive wood is drier. To simulate this, we increase both the parameters $s$, $\alpha$ and $\beta$. Because, the alive wood is drier, we give a more importance to this by increasing the strength two timer quicker than $\alpha$ and $\beta$.
-
-According to \cite{fernandes_fire-smart_2013, fairman_too_2016} frequency increase with drought, however, \cite{bergeron_predicting_nodate} claimed the opposite. In the present study, we choose to not change frequency.
-
+It has been shown that drought increases the mortality rate of the forest \citep{bradstock_biogeographic_2010}. In our model, this corresponds to an increase in the parameter $m$. However, the main consequences of drought is an increase of the strength of fire, notably because the alive wood is drier. To simulate this, we increase  the parameters $s$, $\alpha$ and $\beta$, where we increase $s$ twice faster than the other two parameters. According to \cite{fernandes_fire-smart_2013, fairman_too_2016} fire frequency increase with drought, however, \cite{bergeron_predicting_nodate} claimed the opposite. In the present study, we choose to not change the fire frequency.
 
 %\paragraph{}
 %It can be \hyperref[drought_increase]{demonstrated} that increasing this $4$ parameters increase the ratio $AB$. Thus, a drought scenarios will tend firstly to increase both variability and the collapse probability and after a decrease of both measures.
 
 \paragraph{}
-In the following figures, the consequences of drought for each dynamical cases are presented. It can be remarked that variability could increase without collapse probability (for the dynamical case \textit{Accumulation - unlikely collapse} and \textit{Fluctuation - unlikely collapse}). For other (\textit{Accumulation - possible collapse} and \textit{Accumulation - inevitable collapse}) variability follow not trend, and the collapse probability either have the same behaviour or increase. The two dynamical cases \textit{Fluctuation - possible collapse} and \textit{Fluctuation - inevitable collapse} show an increase of first collapse probability and after variability.
-
-In general, the drought increase the collapse probability, and not always with an increase of the variability.
+In the Fig. \ref{fig:drought1}, \ref{fig:drought2}, \ref{fig:drought3} \ref{fig:drought4}, the consequences of drought for each dynamical case are presented. It can be seen that variability can increase without collapse probability changing (for the dynamical case \textit{Accumulation - Unlikely collapse} and \textit{Fluctuation - Unlikely collapse}). For other cases (\textit{Accumulation - Possible collapse} and \textit{Accumulation - Inevitable collapse}) variability does not follow a clear trend, and the collapse probability tends to have a same behaviour or increasing further. The two dynamical cases \textit{Fluctuation - Possible collapse} and \textit{Fluctuation - Inevitable collapse} show an increase of first collapse probability and later variability. In general, drought increases the collapse probability, but an increase in the variability does not always occur.
 
 
 \begin{figure}[h]
@@ -1252,17 +1185,17 @@ In general, the drought increase the collapse probability, and not always with a
 \includegraphics[width=6cm]{results/drought/return_never.png}
 \includegraphics[width=6cm]{results/drought/equivalent_never.png}
 \end{center}
-\caption{\label{fig:temp}Effect of drought for the dynamical case : \textit{Accumulation - unlikely collapse} at the left and \textit{Fluctuation - unlikely collapse} at the right
-}
+\caption{\label{fig:temp}Effect of drought for the dynamical cases: \textit{Accumulation - Unlikely collapse} at the left and \textit{Fluctuation - Unlikely collapse} at the right.
+\label{fig:drought1}} 
 \end{figure}
-
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=6cm]{results/drought/return_moderate.png}
 \includegraphics[width=6cm]{results/drought/return_always.png}
 \end{center}
-\caption{\label{fig:temp}Effect of drought for the dynamical case : \textit{Accumulation - possible collapse} at the left and \textit{Accumulation - inevitable collapse} at the right}
+\caption{\label{fig:temp}Effect of drought for the dynamical cases: \textit{Accumulation - Possible collapse} at the left and \textit{Accumulation - Inevitable collapse} at the right.
+\label{fig:drought2}}
 \end{figure}
 
 \begin{figure}[h]
@@ -1270,18 +1203,15 @@ In general, the drought increase the collapse probability, and not always with a
 \includegraphics[width=6cm]{results/drought/equivalent_moderate.png}
 \includegraphics[width=6cm]{results/drought/equivalent_always.png}
 \end{center}
-\caption{\label{fig:temp}Effect of drought for the dynamical case : \textit{Fluctuation - possible collapse} at the left and \textit{Fluctuation - inevitable collapse} at the right}
+\caption{\label{fig:temp}Effect of drought for the dynamical cases: \textit{Fluctuation - Possible collapse} at the left and \textit{Fluctuation - Inevitable collapse} at the right.
+\label{fig:drought3}}
 \end{figure}
-
-
-\newpage
-
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=9cm]{results/drought/fuel_low.png}
 \end{center}
-\caption{\label{fig:temp}Effect of drought for the dynamical case : \textit{Depletion}}
+\caption{\label{fig:temp}Effect of drought for the dynamical case: \textit{Depletion}. \label{fig:drought4}}
 \end{figure}
 
 
@@ -1418,7 +1348,7 @@ In the specific context of forest-fire dynamics, we show that the notion that fo
 \label{adim}
 
 \paragraph{}
-The origianl model is the following :
+The origianl model is the following:
 
 \[
 \left\lbrace
@@ -1431,7 +1361,7 @@ The origianl model is the following :
 \]
 
 \paragraph{}
-We have two different dimension that can be removed : "biomass density" and time. We can remark that we could also consider that $N$ and $W$ have not the same dimension, and thus we could remove one more parameter. However, this would do not conserve anymore the respective proportion of $N$ and $W$.
+We have two different dimension that can be removed: "biomass density" and time. We can remark that we could also consider that $N$ and $W$ have not the same dimension, and thus we could remove one more parameter. However, this would do not conserve anymore the respective proportion of $N$ and $W$.
 
 \paragraph{}
 Note
@@ -1503,7 +1433,7 @@ We have finally the following system,
 
 %\paragraph{Remark} % equilibrium
 \paragraph{} % equilibrium
-%\todo{COMMENTS : - Before the simple analysis, you say "we only consider growth terms.", but you also consider decay and such. You can say you look at the continuous dynamics without the effect of fires. Or something else similar.
+%\todo{COMMENTS: - Before the simple analysis, you say "we only consider growth terms.", but you also consider decay and such. You can say you look at the continuous dynamics without the effect of fires. Or something else similar.
 %- I don't understand this sentence "Also, the figure below give an example for a well choose set of parameters of a time series.". What is chosen? You can instead write something like "We demonstrate the dynamics of this model in figure 2."
 %- I was confused by the mysterious short paragraph "We can remark that the growth of the system is continuous and deterministic. However, the perturbation (fire) are discrete and stochastic. The implementation to solve the system need thus to take care of this, more details in appendix."
 %- I am not sure what the purpose is of the end of page 14 and beginning of page 15. It does not seem to be necessary to understand other parts in the methods section, as far as I can tell. Maybe put this in the results section? Also, I don't know the value of the phase-portrait (fig.3) - you don't explain it in a legend, or really mention it in the main text. }
@@ -1561,7 +1491,7 @@ Also we represent the phase portrait for both $N$ and $W$. We recall that the dy
 \subsection{Equilibrium}
 \label{equi}
 \paragraph{}
-We want to determine the equilibrium point for the deterministic part :
+We want to determine the equilibrium point for the deterministic part:
 \[
 \left\lbrace
 \begin{array}{rcl}
@@ -1772,7 +1702,7 @@ The method choose here is to solve to stop the resolution of the system for each
 \subsection{Choice of the time step}
 
 \paragraph{}
-In the study, frequency of the fire is a major concern, as a consequence, the time step need to be adapted. Indeed, it is important to at least several time step between each fire, in order to simulate the growth of the biomass. However, as always, a too small time step increased the time needed to compute the solutions. Here we choose the following relation to assign the value of the time step :
+In the study, frequency of the fire is a major concern, as a consequence, the time step need to be adapted. Indeed, it is important to at least several time step between each fire, in order to simulate the growth of the biomass. However, as always, a too small time step increased the time needed to compute the solutions. Here we choose the following relation to assign the value of the time step:
 \[
 dt = \min(0.1, \frac{0.1}{frequency})
 \]
@@ -1795,7 +1725,7 @@ Also, we can remark that the final time change the value of the collapse probabi
 In order to not have to run too long simulation, an average of both $N$ and $W$ is estimated. It help to initialise the dynamics, indeed the transitions time is shorter
 %\todo{ ? ? ? (plot time series in appendices, to compare if we take the initial point [1.,0] or $[1,\frac{m}{d}]$ explain that in this case we need to have long enough simulation especially if $d$ the recovery rate is too small)}
 
-We use the following model :
+We use the following model:
 \[
 \left\lbrace
 \begin{array}{rcl}
@@ -1804,7 +1734,7 @@ We use the following model :
 \end{array}
 \right.
 \]
-Assumption : frequency is high enough : 
+Assumption: frequency is high enough: 
 \[
 \begin{array}{rcl}
 \delta_F(t) & \approx & f \\
@@ -1831,7 +1761,7 @@ At the pseudo equilibrium (when fire counterbalance growth).
 \end{array}
 \right.
 \]
-Focus on the second equation : 
+Focus on the second equation: 
 \[
 \begin{array}{rcl}
 \frac{dW^*}{dt} & = & 0 \\
@@ -1986,13 +1916,13 @@ U = 1-A
 Also we denote, $\lambda$ the average severity of a fire. The derivation of $\lambda$ is more complex and will be studied further.
 
 %In order to estimate the variability, we assume that $f$ is high enough to make decompose the variability as the product of the frequency and the perturbations.
-Because, the strength is low, the frequency is high, according to \cite{zelnik2018impact} we can estimate the variability by : 
+Because, the strength is low, the frequency is high, according to \cite{zelnik2018impact} we can estimate the variability by: 
 \[
 \begin{array}{rcl}
 Variability & = & f\frac{\lambda^2}{U}
 \end{array}
 \]
-Thus, the main difficulty to estimate the variability is to approximate $\lambda$. An important point is that when no fuel is present the fire stop. This implies that the actual average of the strength is lower than $s$. In order to consider this point, we calculate again the average of the perturbation. To have a fire we need that to have more fuel than the biomass burned :
+Thus, the main difficulty to estimate the variability is to approximate $\lambda$. An important point is that when no fuel is present the fire stop. This implies that the actual average of the strength is lower than $s$. In order to consider this point, we calculate again the average of the perturbation. To have a fire we need that to have more fuel than the biomass burned:
 \[
 \begin{array}{rcl}
 W^{av} & > & s\beta(N^{av}+\alpha W^{av}) \\
@@ -2014,7 +1944,7 @@ In order to respect this threshold, we can simply redefine $\lambda$ as
 %\todo{}
 
 \paragraph{}
-We want to estimate $cp1$ : the risk to collapse with only one fire. To do this we consider the exponential distribution of the strength, and integrate between $N^*-a$ and $\frac{W^*}{\beta}$. The first term is the quantity of biomass needed to go from the average $N^{av}$ to $A$ the Allee threshold effect, in order to collapse the system. And the second term is the maximum severity of the fire allowed by the fuel level (by assuming that it is closed to $W^{av}$).
+We want to estimate $cp1$: the risk to collapse with only one fire. To do this we consider the exponential distribution of the strength, and integrate between $N^*-a$ and $\frac{W^*}{\beta}$. The first term is the quantity of biomass needed to go from the average $N^{av}$ to $A$ the Allee threshold effect, in order to collapse the system. And the second term is the maximum severity of the fire allowed by the fuel level (by assuming that it is closed to $W^{av}$).
 
 \[
 \begin{array}{rcl}

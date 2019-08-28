@@ -138,6 +138,9 @@ University : INSA Toulouse \footnote{135, Avenue de Rangueil 31077 Toulouse Cede
 \listoffigures
 
 
+
+\newpage
+
 \listoftables
 
 \listofalgorithms
@@ -346,7 +349,7 @@ In more detail, we begin by presenting a \hyperref[dynamical_system]{dynamical s
 This allows us to categorise seven distinct dynamical states of the system, which we call \hyperref[dyna_cases]{cases}. We use out understanding of these different dynamical cases to decompose the different reactions to the \hyperref[impact_freq]{impact} of fire frequency on the two stability measures, and note that they can diverge. After studying the \hyperref[transition]{transition} from one dynamical case to another one with change of frequency, we show that the evolution of the two measures is not always synchronised. Focusing on a more pragmatic question, we show that \hyperref[fuel_removal]{\textit{fuel removal}} is major fire management strategy and that \hyperref[drought]{\textit{drought}} could have catastrophic consequences.  
 
 We \hyperref[Discussion]{discuss} the major limitation of the present study, and examine the relevance of the distinctions of the two measures regarding the literature of early warning signals. We confirm the effectiveness of fuel removal and the danger of drought.
-\todo{adapt after the validation of the discussions}
+%\todo{adapt after the validation of the discussions}
 
 
 
@@ -396,7 +399,7 @@ The major assumption of the model is that fire frequency is independent of $W$. 
 
 
 \paragraph{}
-In order to simplify the study of the model, we adimensionnalise the system. As seen in equation \ref{eq:adim}, this leaves us with 7 parameters (\hyperref[adim]{see derivation in appendix}). 
+In order to simplify the study of the model, we adimensionnalise the system. As seen in equation \ref{eq:adim}, this leaves us with 7 parameters (see derivation in appendix \ref{adim}). 
 
 \begin{subequations}\label{eq:adim}
  \begin{align}
@@ -431,7 +434,7 @@ In Fig. \ref{fig:collapse}. we show a single simulation where a collapse has occ
 \begin{figure}[h!] 
 \centering
 \includegraphics[width=12.cm]{time_series_cp_1.png}
-\caption{Collapse ??? (add more text)
+\caption{For $t$ close to $70$, a strong fire collapse the system. $N$ is put down below the Allee threshold effect (here $A=0.2$) and the dynamics converge now to the origin.
 \label{fig:collapse}
 }
 
@@ -458,7 +461,7 @@ It is useful to consider the measure of variability as long as no collapse has o
 
 
 \paragraph{}
-In practice, we have to make compromise to decrease different sources of possible bias. Even if the dynamics is initialised close to the average values taken by the variables (i.e. the approximations given by eq. \ref{NW1}), it is safer to not take into account the initial part of the time series, to compute collapse probability (thus we do not consider the first $10\%$ of the time series). Also, as explained previously, it is not useful to compute variability after a collapse occurs, but in order to use the same time to measure variability in all simulations, we restrict the computation to the second $10\%$ of the time series (see Fig. \ref{fig:variability2}). Indeed, because the likelihood to collapse in this short range time is low, the bias of collapse should be insignificant (\hyperref[algo_variability]{algorithm in appendix}). Other ways of measuring variability have been implemented and are detailed in \hyperref[other_variability]{appendix}.
+In practice, we have to make compromise to decrease different sources of possible bias. Even if the dynamics is initialised close to the average values taken by the variables (i.e. the approximations given by eq. \ref{NW1}), it is safer to not take into account the initial part of the time series, to compute collapse probability (thus we do not consider the first $10\%$ of the time series). Also, as explained previously, it is not useful to compute variability after a collapse occurs, but in order to use the same time to measure variability in all simulations, we restrict the computation to the second $10\%$ of the time series (see Fig. \ref{fig:variability2}). Indeed, because the likelihood to collapse in this short range time is low, the bias of collapse should be insignificant (\hyperref[algo_variability]{algorithm in appendix}). %Other ways of measuring variability have been implemented and are detailed in \hyperref[other_variability]{appendix}.
 
 \begin{figure}[h!]
 \centering
@@ -537,7 +540,7 @@ As shown in Fig. \ref{fig:NWE}, this estimation works quite well, even for low v
 \begin{figure}[h!]
 \centering
 \includegraphics[width=9cm]{average.png}
-\caption{Average values of $N$ and $W$, shown in green and brown, respectively. Solid lines shows values averaged from 10 simulations, while dashed lines shows values given by the estimation of eq. \ref{eq:NW1}. Parameters used are: $a=0.2, ???$
+\caption{Average values of $N$ and $W$, shown in green and brown, respectively. Solid lines shows values averaged from 10 simulations, while dashed lines shows values given by the estimation of eq. \ref{eq:NW1}. %Parameters used are: $a=0.2, ???$
 \label{fig:NWE}
 }
 \end{figure}
@@ -556,7 +559,7 @@ We denote by $\lambda$ the average severity of a fire, given by
 \]
 Here the first values is simply the fire term, while the second values is the maximum severity of fire allowed by the fuel level, follows from the fact that when fuel is completely burned, the fire stop.
 
-We make the assumption that the effects of fire are independent from each other (which is true when the growth dynamics are linear). Under this assumption, we can can consider the variability to be the linear response to a Poisson process  \citep{zelnik_impact_2018}, which leads us to  a prediction on the value of variability, as given by equation \ref{eq:varpred}. More details are given in \hyperref[variability_estimation]{appendix}.
+We make the assumption that the effects of fire are independent from each other (which is true when the growth dynamics are linear). Under this assumption, we can can consider the variability to be the linear response to a Poisson process  \citep{zelnik_impact_2018}, which leads us to  a prediction on the value of variability, as given by equation \ref{eq:varpred}. More details are given in appendix  \ref{variability_estimation}.
 \begin{equation} \label{eq:varpred}
 variability = f\frac{\lambda^2}{U}
 \end{equation}
@@ -574,7 +577,7 @@ variability = f\frac{\lambda^2}{U}
 \paragraph{}
 The precision of this estimation depends greatly on the parameters values. For example, we can see in Fig. \ref{fig:vargood} an example where the estimation worked well, while in Fig. \ref{fig:varbad} the estimation is less accurate. Specifically, while in Fig. \ref{dif:varbad} the general behavior is captured well, the specific values are overestimated.
 Generally, when the total severity of the fire is high, the accuracy of the estimation decreases. In practice, the product of the parameter $s.\alpha.\beta$ give an interesting clue of the precision of the variability estimation.
-Other estimation of variability have been implement and are presented in \hyperref[variability_estimation_other]{appendix}.
+%Other estimation of variability have been implement and are presented in \hyperref[variability_estimation_other]{appendix}.
 
 %\todo{make agian the plot with just the used estimation (just the "good" ones)}
 \begin{figure}[h!]
@@ -587,7 +590,7 @@ Other estimation of variability have been implement and are presented in \hyperr
 
 
 \paragraph{}
-Similarly to variability, we also estimate the value of collapse probability. Here, we assume that system collapse as a result of a single fire event. This probability is called $cp1$. Derivation of $cp1$ could be found \hyperref[cp_derivation]{appendix}, where we consider the distribution of the strength and by using the estimation of $N^{av}$ and $W^{av}$ we deduce the risk to go below the Allee threshold effect
+Similarly to variability, we also estimate the value of collapse probability. Here, we assume that system collapse as a result of a single fire event. This probability is called $cp1$. Derivation of $cp1$ could be found appendix \ref{cp_derivation}, where we consider the distribution of the strength and by using the estimation of $N^{av}$ and $W^{av}$ we deduce the risk to go below the Allee threshold effect
 \[
 \begin{array}{rcl}
 cp1 & = & (N^*+\alpha W^*)((N^*-a+s)\exp(-\frac{N^*-a}{s}) - (\frac{W^*}{\beta}+s)\exp(-\frac{W^*}{s\beta})
@@ -617,7 +620,7 @@ More generally, even if the maximum of the collapse probability is under estimat
 
 
 \paragraph{}
-In this study, we focus on two measures: variability and collapse probability. However as detailed in the introduction, several different notions of \hyperref[stability_litterature]{stability} are often considered in the literature. These different aspects of stability are briefly presented in  \hyperref[stability_others]{appendix}.
+In this study, we focus on two measures: variability and collapse probability. However as detailed in the introduction, several different notions of \hyperref[stability_litterature]{stability} are often considered in the literature. %These different aspects of stability are briefly presented in  \hyperref[stability_others]{appendix}.
 
 \subsection{Classification of dynamical behaviour}
 
@@ -1088,6 +1091,7 @@ To clarify, even in the dynamical case \textit{accumulation - inevitable collaps
 \includegraphics[width=6cm]{results/measures_acc_inevitable.png} 
 \end{center}
 \caption{\label{fig:temp}Measures evolution over frequency for the dynamical cases : Left \textit{accumulation - possible collapse}, Right \textit{accumulation - inevitable collapse}}
+\label{acc_possible_and_inevitable}
 \end{figure}
 
 
@@ -1333,7 +1337,7 @@ As seen in Fig. \ref{fig:samefire}, using both methods we have a peak in variabi
 \paragraph{}
 We have seen in the \hyperref[def_detection]{introduction} that the literature about detection of critical transitions is mainly based on the closeness to a tipping point. The model we consider is a bistable system, so that naively these indicators could be thought to easily apply. However, the collapse scenarios we consider typically do not occur close to the critical point, and hence are not directly applicable using the notion of critical slowing down. On the other hand, since the system cannot recover once a collapse has occurred, flickering does not occur either, and hence methods related to this notion are not clearly applicable either.
 
-However, we do find that variability can sometimes be a good indicator of system collapse. In particular, for two dynamical cases, \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse}(Fig. ??? and ???, respectively), this may apply. Conversely, for the dynamical case \textit{accumulate - unlikely collapse}, variability increase without an increasing of the collapse probability. More generally, Fig. \ref{fig_loop} shows that for different sets of parameters it is possible to have different relations between the two measures. One measure could increase (respectively decrease) before the other increases (respectively decreases). %When the loops shown in Fig. \ref{fig_loop} turn in two different directions (mostly counter clockwise) the collapse probability increases and reaches a peak before the variability.
+However, we do find that variability can sometimes be a good indicator of system collapse. In particular, for two dynamical cases, \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse}(Fig. \ref{acc_possible_and_inevitable} at the left and at the right, respectively), this may apply. Conversely, for the dynamical case \textit{accumulate - unlikely collapse}, variability increase without an increasing of the collapse probability. More generally, Fig. \ref{fig_loop} shows that for different sets of parameters it is possible to have different relations between the two measures. One measure could increase (respectively decrease) before the other increases (respectively decreases). %When the loops shown in Fig. \ref{fig_loop} turn in two different directions (mostly counter clockwise) the collapse probability increases and reaches a peak before the variability.
 
 
 \subsection{Management}
@@ -1495,10 +1499,12 @@ We have finally the following system,
 
 %\paragraph{Remark} % equilibrium
 \paragraph{} % equilibrium
-\todo{COMMENTS : - Before the simple analysis, you say "we only consider growth terms.", but you also consider decay and such. You can say you look at the continuous dynamics without the effect of fires. Or something else similar.
-- I don't understand this sentence "Also, the figure below give an example for a well choose set of parameters of a time series.". What is chosen? You can instead write something like "We demonstrate the dynamics of this model in figure 2."
-- I was confused by the mysterious short paragraph "We can remark that the growth of the system is continuous and deterministic. However, the perturbation (fire) are discrete and stochastic. The implementation to solve the system need thus to take care of this, more details in appendix."
-- I am not sure what the purpose is of the end of page 14 and beginning of page 15. It does not seem to be necessary to understand other parts in the methods section, as far as I can tell. Maybe put this in the results section? Also, I don't know the value of the phase-portrait (fig.3) - you don't explain it in a legend, or really mention it in the main text. }
+%\todo{COMMENTS : - Before the simple analysis, you say "we only consider growth terms.", but you also consider decay and such. You can say you look at the continuous dynamics without the effect of fires. Or something else similar.
+%- I don't understand this sentence "Also, the figure below give an example for a well choose set of parameters of a time series.". What is chosen? You can instead write something like "We demonstrate the dynamics of this model in figure 2."
+%- I was confused by the mysterious short paragraph "We can remark that the growth of the system is continuous and deterministic. However, the perturbation (fire) are discrete and stochastic. The implementation to solve the system need thus to take care of this, more details in appendix."
+%- I am not sure what the purpose is of the end of page 14 and beginning of page 15. It does not seem to be necessary to understand other parts in the methods section, as far as I can tell. Maybe put this in the results section? Also, I don't know the value of the phase-portrait (fig.3) - you don't explain it in a legend, or really mention it in the main text. }
+
+
 To help understand the dynamics of the model used, we give some simple analytic result. to do this, we only consider growth terms.
 
 \[ % adim model
@@ -1513,10 +1519,10 @@ To help understand the dynamics of the model used, we give some simple analytic 
 
 
 \paragraph{}
-We have thus 3 equilibrium, 2 stable $(0, 0)$ and $(1, \frac{m}{d})$ and one unstable $(A, \frac{mA}{d})$ (\hyperref[equi]{calculus in appendix}).
+We will show that we have 3 equilibrium, 2 stable $(0, 0)$ and $(1, \frac{m}{d})$ and one unstable $(A, \frac{mA}{d})$.
 
 \paragraph{}
-Also, the figure below give an example for a well choose set of parameters of a time series. We can see that here the dynamics come back to the stable equilibrium $(1, \frac{m}{d})$ most of the time, except for the last fire when the system collapse to go to the other stable equilibrium $(0, 0)$. \todo{strength the temporal series (final time = 300)}
+Also, the figure below give an example for a well choose set of parameters of a time series. We can see that here the dynamics come back to the stable equilibrium $(1, \frac{m}{d})$ most of the time, except for the last fire when the system collapse to go to the other stable equilibrium $(0, 0)$. %\todo{strength the temporal series (final time = 300)}
 
 \begin{figure}[h!]
 \centering
@@ -1525,7 +1531,7 @@ Also, the figure below give an example for a well choose set of parameters of a 
 %\label{fig:universe}
 \end{figure}
 
-\newpage
+
 \paragraph{}
 Also we represent the phase portrait for both $N$ and $W$. We recall that the dynamics of $W$ depend of the value $N$. 
 %%%%% same parameters set for both
@@ -1783,7 +1789,7 @@ Also, we can remark that the final time change the value of the collapse probabi
 
 \paragraph{}
 in order to not have to run too long simulation, an average of both $N$ and $W$ is estimated. It help to initialise the dynamics, indeed the transitions time is shorter
-\todo{ ? ? ? (plot time series in appendices, to compare if we take the initial point [1.,0] or $[1,\frac{m}{d}]$ explain that in this case we need to have long enough simulation especially if $d$ the recovery rate is too small)}
+%\todo{ ? ? ? (plot time series in appendices, to compare if we take the initial point [1.,0] or $[1,\frac{m}{d}]$ explain that in this case we need to have long enough simulation especially if $d$ the recovery rate is too small)}
 
 We use the following model :
 \[
@@ -1894,13 +1900,13 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 
 
 
-\newpage
-\section{proba per time unit}
-\label{proba_per_time_unit}
+%\newpage
+%\section{proba per time unit}
+%\label{proba_per_time_unit}
 
-\todo{exact derivation}
-\todo{algorithm}
-\todo{plot to check / illustrate}
+%\todo{exact derivation}
+%\todo{algorithm}
+%\todo{plot to check / illustrate}
 
 
 \newpage
@@ -1910,9 +1916,11 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 \label{algo_variability}
 \todo{algo variability}
 
-\subsection{other variability}
-\label{other_variability}
-\todo{other variability, present them, their advantages, drawback, and their algorithm}
+
+
+%\subsection{other variability}
+%\label{other_variability}
+%\todo{other variability, present them, their advantages, drawback, and their algorithm}
 
 
 \newpage
@@ -1921,9 +1929,9 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 \label{variability_estimation}
 \todo{variability estimation}
 
-\subsection{variability estimation other}
-\label{variability_estimation_other}
-\todo{variability estimation other}
+%\subsection{variability estimation other}
+%\label{variability_estimation_other}
+%\todo{variability estimation other}
 
 
 
@@ -1932,117 +1940,18 @@ Sometimes, the approximation of $W^*$ take negative value. Because $W$ can not b
 \label{cp_derivation}
 \todo{}
 
-\newpage
-\section{Stability}
-\subsection{stability others}
-\label{stability_others}
-\todo{talk about others "measures of stability" such as skewness, kurtosis ... }
-
-
-\subsection{General notions of stability}
-\todo{Talk about the general concept of stability (across the different disciplines)}
-
-
-\newpage
-\section{others coefficients}
-\label{other_ratio}
 
 
 
-\newpage
-\section{derivation ratio}
-\label{derivation_ratio}
-
-\todo{rewrite, it is not clear for now}
-
-
+%\newpage
+%\section{Stability}
+%\subsection{stability others}
+%\label{stability_others}
+%\todo{talk about others "measures of stability" such as skewness, kurtosis ... }
 
 
-\newpage
-\section{Drought effect}
-\label{drought_increase}
-
-
-
-the consequences of climate warming is formalised by a higher values of both $f, s, \alpha$ and $\beta$.
-
-
-
-
-
-
-We recall that 
-\[
-W^* = \epsilon N^*
-\]
-With
-\[
-\epsilon = \frac{m-\beta s f}{d + \beta s f \alpha}
-\]
-Thus, when $f, s, \alpha, \beta$ are small
-\[
-\epsilon \approx \frac{m}{d}
-\]
-In practice, 
-\[
-W^* \approx W^{eq}
-\]
-But, when $f, s, \alpha, \beta$ are high enough
-\[
-\begin{array}{rcl}
-\epsilon & \approx & \frac{1}{\alpha} \\
-W^* & \approx & \frac{N^*}{\alpha} \\
-W^* & \approx & 0 \\
-\end{array}
-\]
-
-
-When $f, s, \alpha, \beta$ are small
-\[
-\begin{array}{rcl}
-\lambda_{threshold} & = & min(\{s(N^*+\alpha W^*), \frac{W^*}{\beta s (N^*+\alpha W^*)}\}) \\
-& = & s(N^*+\alpha W^*) \\
-\end{array}
-\]
-And, when $f, s, \alpha, \beta$ are high 
-\[
-\begin{array}{rcl}
-\lambda_{threshold} & = & min(\{s(N^*+\alpha W^*), \frac{W^*}{\beta s (N^*+\alpha W^*)}\}) \\
-& = & \frac{W^*}{\beta s (N^*+\alpha W^*)} \\
-& \approx & 0 \\
-\end{array}
-\]
-Thus, the variability is quite high when $f, s, \alpha, \beta$ are small and the variability is very small when $f, s, \alpha, \beta$ is high. In practice, drought decrease the variability.
-
-\paragraph{}
-Also, for the collapse probability, we use the following expression (in order to simplify the present calculus).
-\[
-cp1fire = (N^*+\alpha W^*)((N^*-a+s)\exp(-\frac{N^*-a}{s}) - (\frac{W^*}{\beta}+s)\exp(-\frac{W^*}{s\beta})
-\]
-Again, with $f, s, \alpha, \beta$ are small :
-\[
-\begin{array}{rcl}
-cp1fire & = & (N^*+\alpha W^*)((N^*-a+s)\exp(-\frac{N^*-a}{s}) - (\frac{W^*}{\beta}+s)\exp(-\frac{W^*}{s\beta})) \\
-& \approx & 0 \\
-\end{array}
-\]
-On the other hand, when $f, s, \alpha, \beta$ are high :
-\[
-\begin{array}{rcl}
-cp1fire & = & (N^*+\alpha W^*)((N^*-a+s)\exp(-\frac{N^*-a}{s}) - (\frac{W^*}{\beta}+s)\exp(-\frac{W^*}{s\beta})) \\
-& \approx & (N^*+\alpha W^*)((N^*-a+s).1 - (\frac{W^*}{\beta}+s).1)) \\
-& \approx & (N^*+\alpha W^*)(N^*-a) \\
-\end{array}
-\]
-Now, the probability to collapse with only one fire is non negligible. Furthermore, the probability to collapse in the time study increase even more because frequency if higher (recall $cp = 1-(1-cp1)^{fT}$).
-
-\paragraph{}
-We want now to study the consequences of drought with aspect to the different dynamical cases studying previously.
-\[
-r = fs\beta(\frac{2}{m}+\frac{\alpha}{d})
-\]
-The ratio $AB$ is almost the product of the coefficient of interest. We can deduce easily that the ratio increased with drought.
-
+%\subsection{General notions of stability}
+%\todo{Talk about the general concept of stability (across the different disciplines)}
 
 
 

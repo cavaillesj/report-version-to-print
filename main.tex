@@ -150,6 +150,28 @@ University : INSA Toulouse \footnote{135, Avenue de Rangueil 31077 Toulouse Cede
 \addcontentsline{toc}{section}{Acknowledgment}
 
 
+\paragraph{}
+Throughout the writing of this dissertation I have received a great deal of support and assistance.
+
+\paragraph{}
+I would first like to thank my memory advisor Yuval Zelnik , for his patience, motivation and enthusiasm. You provided me with the tools that I needed to choose the right direction and successfully complete my dissertation. Your willingness to give your time so generously has been very much appreciated. 
+
+\paragraph{}
+I would also like to acknowledge Michel Loreau for their encouragement and insightful comments. Your expertise was invaluable in the formulating of the research topic and methodology. You supported me greatly and were always willing to help me.
+
+\paragraph{}
+I want to thank all the staff of the moulis station for your excellent cooperation and for the opportunities you give me.
+
+\paragraph{}
+I would also like to thank my jury members, professor  Marie-Hélène Vignal and professor Charles Dossal, for dedicated time for this memories.
+
+\paragraph{}
+Finally, I must express my profound gratitude to my parents for providing me with unfailing support and encouragement throughout my years of study. 
+
+\paragraph{}
+Jérôme Cavaillès
+
+
 
 \newpage
 %\todo{Choice of this internship ?}
@@ -235,8 +257,31 @@ However, according to the same study, all these can be collapsed to only 6 perti
 %Indeed, different stability measures have been defined to monitor different aspects of the system's response to perturbations. 
 %If this different measures appear to be strongly related, it is not always true \citep{donohue2013dimensionality}.
 
+\label{def_detection}
 These different concepts could notably used to avoid collapse. Some study have shown the relevance to use this theory to predict the risk to collapse \citep{carr_modeling_2012, dai_generic_2012, dai_slower_2013}.
+It exists a literature which focuses on detection of critical transitions, i.e. shifts in the system's state that occur abruptly and cannot easily be reversed. It is highly useful to be able to anticipate such abrupt changes, in order to prevent them, or at the very least to decrease their effect. One of the most used indicators of such critical change is \textit{variability} \citep{brock_variance_2006, carpenter2006rising, scheffer2015generic, dakos_robustness_2012, biggs_turning_2009}, while many others indicators exist as well \citep{scheffer_generic_2015,dakos_methods_2012}. Most of these methods are based on at least one of the following phenomena: critical slowing down and flickering.
 
+The theory of \textit{critical slowing down} focuses on the slowdown of dynamics due to the proximity with a tipping point \citep{dakos_critical_2014, dakos_slowing_nodate, scheffer_anticipating_2012}. Many studies use this principle to develop early warning signals in different field such as psychology \citep{van_de_leemput_critical_2014}, climate change \citep{lenton_early_2012}, ecology \citep{chisholm_critical_2009, gandhi_critical_1998},  engineering \citep{ren_early_2015}, and finance \citep{diks_critical_2018}. The basic idea is that when a system approaches a tipping point, the basin of attraction flattens, and if perturbations are of the same amplitude, then the variance changes. Fig. \ref{fig:csd} shows how variability increases when the basin of attraction changes.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=12cm]{slowing_down.png}
+\end{center}
+\caption{\label{fig:temp}Heuristic illustration of critical slowing down could not be used directly. from \cite{lenton_early_2012}.
+\label{fig:csd}
+}
+\end{figure}
+
+Flickering is based on the idea that close to a tipping point, the dynamics will change from one basin of attraction to another one. This affects the distribution of the state of the system \citep{carr_modeling_2012, wang_flickering_2012, dakos_flickering_2013, scheffer_anticipating_2012}. Fig. \ref{fig:flick} gives an illustration of this phenomena.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{flickering.png}
+\end{center}
+\caption{\label{fig:temp}Flickering between alternative states in highly stochastic systems \citep{scheffer_anticipating_2012}}
+\label{fig:flick}
+\end{figure}
 
 
 %\paragraph{ecosystem management \\}
@@ -1245,100 +1290,61 @@ In general, the drought increase the collapse probability, and not always with a
 \label{Discussion}
 
 \paragraph{} % brief summary,  recall objective ...
-We have seen that us is possible to distinguish several types of dynamics. For each ones, measures (variability and collapse probability) do not react similarly when frequency increase. This two measures are sometimes dissimilar, they do not react correspondingly. This could be a problem if we want to use variability as a tool to stabilize the dynamics, or as indicators of critical transitions.
+In this study we have focused on a model of forest dynamics undergoing repeated fires. We have seen that it is possible to distinguish between several types of dynamics in this model, each having a characteristic behaviour. For each such case, the two measures considered, variability and collapse probability, do not react similarly when frequency increases. Overall these two measures are sometimes dissimilar, as they do not react correspondingly to different external forcing. This could be a problem if we want to use variability as a tool to stabilise the dynamics, or as indicators of critical transitions.
 
-
-
-\subsection{Limitation}
+\subsection{Limitations}
 
 \paragraph{}
-The present study aim at reveal different point (e.g. \textit{variability} can not always be used to predict a collapse) however it will need  more improvements to be somewhat predictive.
+The present study aims to reveal different properties of a forest-fire system, and more generally, of ecosystems where the perturbation regime is strongly coupled to the state of the system itself. For instance, we found that \textit{variability} can not always be used to predict a collapse. However, more work is needed if this approach is to become predictive.
 
 \label{discussion_frequency_ass}
-We assume that the frequency of the fire is independent of the density biomass. It can be argued that fuels have an influence on both severity and frequency  of fires \citep{schoennagel_interaction_2004}. However, adding this feedback (from $W$ to the frequency) will surely tends to decrease the density biomass of $W$ (because, when $W$ is higher, the frequency is higher too, and so the dynamics keep a low value of $W$). In other word, this should have the \textit{depletion} scenarios more often.
+We have assumed that the frequency of the fire is independent of the density of biomass. It can be argued that fuels have an influence on both severity and frequency  of fires \citep{schoennagel_interaction_2004}. However, adding this feedback ($W$ influencing the frequency) will surely tends to decrease the density biomass of $W$ (because, when $W$ is higher, the frequency is higher too, and so the dynamics keep a low value of $W$). In other words, adding this feedback will lead to the \textit{depletion} scenarios being more common.
 
-Also, we only consider one kind of death wood, this can be details in several type (coarse woody debris, fine woody debris, below ground ...) \citep{russell_quantifying_2015}. In the literature, the data are rarely for all the wood, and, some wood burned easier than other. Moreover, in practice we can distinguish several fire regime (e.g., crown fires, severe surface fires, and light surface fires) \citep{reichle_fire_1981}. All of this different fires disturbed differently the dry wood. So the dynamic can be modelled in a more complex ways.
+Another issue is that we only consider one kind of dead wood, while it is often useful to consider several different types of such material (e.g. coarse woody debris, fine woody debris, below ground) \citep{russell_quantifying_2015}. In the literature, data is rarely available for all these types, and some wood types burn more easily than others. Moreover, in practice we can distinguish between several fire regimes (e.g.  crown fires, severe surface fires, and light surface fires) \citep{reichle_fire_1981}, where different fires regimes have different sensitivities to types of dry wood. Therefore the dynamics of fires may be better modelled in a more complex manner, which should change the way the feedback mechanisms works in this ecosystem.
 
-Less relevant, we only consider density biomass. However, the spatial distribution can affect fires propagation (especially for small fires) \citep{beaty_spatial_2002}. For example, a burned area can create an obstacle when another fire occur \citep{bergeron_natural_2002, ager_modeling_2007}. It is sometimes used as a management tools with the name \textit{fuel breaks} to prevent big fires, manager create wall of no fuel to stop the propagation of fires \citep{syphard_comparing_2011, agee_use_2000}
+A more minor issues is that we only consider a non-spatial biomass density. This can be an issue since the spatial distribution of both trees and past fires can affect fire propagation (especially for small fires) \citep{beaty_spatial_2002}. For example, a burned area can create an obstacle when another fire occurs \citep{bergeron_natural_2002, ager_modeling_2007}. It is sometimes used as a management tool called a \textit{fuel break} to prevent large fires, where a manager creates a continuous region with no fuel, that will stop the propagation of fires \citep{syphard_comparing_2011, agee_use_2000}.
 
 %Data varies greatly and also depend on several variable (type of forest, localisation ... )
 
 %\todo{talk again about the bias from cp to variability ??} 
 
-
-
-\subsection{ mathematical/modelling aspects}
-
-
-
-
-
+\subsection{Mathematical/modelling aspects}
 
 \paragraph{}
-Because the collapse of the system affect the variability of this system, it is difficult to have robust computation of the variability. Construct an unbiased computation of variability do not seem to be possible. In others words, because a possible collapse can occur at different time it is difficult to have a robust computation of the variability.
+Because the collapse of the system affects the variability within the system, it is often difficult to have robust computation of the variability. Constructing an unbiased computation of variability does not seem to be possible. Specifically, because a collapse can occur at all times, it is difficult to calculate the variability under no collapse without introducing a bias to the calculation.
 
-It could be argued that the dissimilarity between variability and collapse probability is an artefact of this bias. Especially, the peak of variability could arise from the collapse events. To validate the conformity of the results, we use a same fire randomisation for different parameter (presented in \hyperref[same_fire]{methods}). We use the same time scale to compute variability (before the time of the first collapse). 
+It could be argued that the dissimilarity between variability and collapse probability is an artefact of this bias. In particular, the peak of variability could arise from the collapse events. To validate that this is not the case, we use two different methods of comparing simulations with different parameters (presented in \hyperref[same_fire]{methods}). Specifically, we use either the same time scale or the same set of fire events to compute variability (before the time of the first collapse), allowing us to show that the peak in variability is not directly related to collapse events. 
 
-We could check below that we have a change of the variability computation (for two ways to compute it). The peak of variability do not seem to be an artefact of the collapse. Another control is that it is possible to have the peak of variability before the collapse one.
+As seen in Fig. \ref{fig:samefire}, using both methods we have a peak in variability, allowing us to conclude that the peak of variability is not an artefact of the collapse. In particular, for the same-fire method, we have a smooth peak forming, hinting that the source of the non-monotonous behaviour is not in discrete events (and thus not related to a collapse). Additionally, we note that it is possible to have the peak in variability before a peak in collapse probability, hinting further that the two need not be connected.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=12cm]{same_fire.png}
 \end{center}
-\caption{\label{fig:temp}Variability evolution with frequency, computed in a robust ways, using the exactly the same fires sequence (\textit{same fire}) or the same first fire and stop the simulation at the same time for all frequency (\textit{same time})}
+\caption{\label{fig:samefire}Variability evolution with frequency, computed in a robust way, using either exactly the same fires sequence (\textit{same fire}) or the same first fire where all simulations end at the same time for all frequencies (\textit{same time}).}
 \end{figure}
-
-
 
 
 \subsection{Collapse indicators}
 
-\paragraph{}
-Mainly in ecology, and in others applied science, an essential care is given to detect crucial shift. It is useful to be able to anticipated an abrupt change in order to prevent it or at least to decrease it. One of the most used indicators of critical change (a sudden change from one state to another one) is \textit{variability} \citep{brock_variance_2006, carpenter2006rising, scheffer2015generic, dakos_robustness_2012, biggs_turning_2009}. They are others indicators of critical change :  \cite{scheffer_generic_2015} and \cite{dakos_methods_2012} give a review of the different early warnings signal. If a lot of different methods have been established, most of them are based on at least one of the following phenomena : critical slowing down and flickering.
-
-\textit{critical slowing down} use the slowdown of the dynamics due to the proximity with the critical change \citep{dakos_critical_2014, dakos_slowing_nodate, scheffer_anticipating_2012}. A lot of study used this principles to develop early warning signal in different field such as psychology \citep{van_de_leemput_critical_2014} climate change \citep{lenton_early_2012} ecology \citep{chisholm_critical_2009, gandhi_critical_1998} engineering \citep{ren_early_2015} or finance \citep{diks_critical_2018}. Critical slowing down are used to detect when a system approach a tipping point, the flatness of the basin of attraction change, and by assuming that the perturbations are of the same amplitude, the variance change. The following figures (from \cite{lenton_early_2012}) show how variability increase when the basin of attraction change.
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=12cm]{slowing_down.png}
-\end{center}
-\caption{\label{fig:temp}Heuristic illustration of critical slowing down could not be used directly. from \cite{lenton_early_2012}}
-\end{figure}
-
-Flickering is based on the idea that closed to a tipping point, the dynamics will change from one basins of attraction to another one. This affect the distributions of the state of the dynamics \citep{carr_modeling_2012, wang_flickering_2012, dakos_flickering_2013, scheffer_anticipating_2012}. Figures \ref{flickering} give an illustration of this phenomena.
-
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=10cm]{flickering.png}
-\end{center}
-\caption{\label{fig:temp}Flickering between alternative states in highly stochastic systems \citep{scheffer_anticipating_2012}}
-\label{flickering}
-\end{figure}
+%\paragraph{}
+%In ecology, as well as in other applied sciences, an essential care is given to the 
 
 \paragraph{}
-In our model, we have always a bistable system, and no bifurcation, the set of methods using critical slowing down or flickering could not be used directly. Another argument against the used of flickering is that in our model the critical change is the collapse, it can be noticed that this one is irreversible. The system could not oscillate between two state (change to collapse at most).
+We have seen in the \hyperref[def_detection]{introduction} that the literature about detection of critical transitions is mainly based on the closeness to a tipping point. The model we consider is a bistable system, so that naively these indicators could be thought to easily apply. However, the collapse scenarios we consider typically do not occur close to the critical point, and hence are not directly applicable using the notion of critical slowing down. On the other hand, since the system cannot recover once a collapse has occurred, flickering does not occur either, and hence methods related to this notion are not clearly applicable either.
 
-Here, we show that variability is sometimes could sometimes be good indicators of the collapse of the system. For example for the two dynamical cases \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse}. However, for the dynamical case \textit{accumulate - unlikely collapse}, variability increase without an increasing of the collapse probability. More generally, figures \ref{fig_loop} show that for different set of parameters is is possible to have different connection between the two measures. Especially, one measures could increase (respectively decrease) before the others increase (respectively decrease). Visually, the loop turn in two different directions (most of the time the direction is counter clock wise) he collapse probability increase and reach a peak before the variability.
-
-
-
-
-
+However, we do find that variability can sometimes be a good indicator of system collapse. In particular, for two dynamical cases, \textit{accumulation - possible collapse} and \textit{accumulation - inevitable collapse}(Fig. ??? and ???, respectively), this may apply. Conversely, for the dynamical case \textit{accumulate - unlikely collapse}, variability increase without an increasing of the collapse probability. More generally, Fig. \ref{fig_loop} shows that for different sets of parameters it is possible to have different relations between the two measures. One measure could increase (respectively decrease) before the other increases (respectively decreases). %When the loops shown in Fig. \ref{fig_loop} turn in two different directions (mostly counter clockwise) the collapse probability increases and reaches a peak before the variability.
 
 
 \subsection{Management}
 
 \paragraph{}
 %Traditional fire management privileges fire suppression \citep{fernandes_fire-smart_2013}. 
-Firefighting have develop unnatural fuel accumulation, and more severe wildfires \citep{schoennagel_interaction_2004}. The present study show that fuel accumulation is the main driver of fire damage. Decreasing the frequency of fire is a misconception called the firefighting trap \citep{collins_forest_2013}.
+Modern firefighting strategies have often developed unnatural fuel accumulation, and therefore more severe wildfires \citep{schoennagel_interaction_2004}. The present study confirms that fuel accumulation is indeed the main driver of fire damage. Decreasing the frequency of fire is a misconception called the firefighting trap \citep{collins_forest_2013}, and more often other methods should be applied.
 
-Fuel treatment is the major concern to prevent large wildfire \citep{liu_studying_2013, martinson_performance_nodate}. One of the methods is to used prescribed burning (PB according to \cite{liu_analyzing_2010}). In our methods, we could model this by increasing the fire frequency, at some point it drive us in the \textit{depletion} dynamical cases, and fuel level is too low to permit a collapse. It have been argued by \cite{scholl_fire_2010} that managers have to use multiple burns at short intervals. It could be claimed that multiple prescribed burning would affect ecosystem, however it have been demonstrated that this impact is lower than for wildfires \citep{alcaniz2018effects, fultz2016forest, wiedinmyer2010prescribed}. 
+Fuel treatment is typically seen as the best strategy to prevent large wildfire \citep{liu_studying_2013, martinson_performance_nodate}. One specific method is to use prescribed burning \cite{liu_analyzing_2010}. In our methodology, we could model this by increasing the fire frequency, which at some point will drive us to transition into the \textit{depletion} dynamical cases, where fuel level are too low to lead to a collapse. It have been argued by \cite{scholl_fire_2010} that managers have to use multiple burns at short intervals. While it could be argues that multiple prescribed burning would adversely affect the ecosystem, it have been demonstrated that this impact is lower than for wildfires \citep{alcaniz2018effects, fultz2016forest, wiedinmyer2010prescribed}. 
 
-Prescribed burning could be used jointly with thinning, one advantage is to treat both canopy and surface fuels \citep{kalies_tamm_2016, agee_basic_2005}. Thinning treatments were aimed at removing few trees to increase the growth, health and value of the other trees. It have been shown that this strategy is efficient \citep{hurteau2008carbon} and could also better resists to drought \citep{d2013effects} and pests \citep{waring2005silvicultural}. In present study, we could see that decreasing the value of the parameter $d$ decrease significantly the risk to collapse.
-
-
-
+Prescribed burning could be used jointly with thinning, which would allow to both treat canopy and surface fuels \citep{kalies_tamm_2016, agee_basic_2005}. Thinning treatments are mostly aimed at removing a few trees to increase the growth, health and value of the other trees. This strategy is often efficient \citep{hurteau2008carbon} and could also better resist droughts \citep{d2013effects} and pest outbreaks \citep{waring2005silvicultural}. In the present study, we could see that decreasing the value of the parameter $d$ significantly decreases the risk to collapse.
 
 %\subsection{Last words}
 %\todo{perhaps}
@@ -1356,6 +1362,16 @@ Prescribed burning could be used jointly with thinning, one advantage is to trea
 
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
+
+\paragraph{}
+The aim of the present document is to demonstrate the disparity between two well used measures of dynamical systems: variability and collapse probability. We used a particular model of a forest fire, to demonstrate the interplay between these two measures . By constructing a partition of different dynamical behaviour, we could show that these measures behave differently when changing a parameter. Although the two measures are not used in a predictive way, it is established that there is a clear dissimilarity between them.
+
+In the specific context of forest-fire dynamics, we show that the notion that forest managers should act on fire frequency (by deploying firefighters or igniting counter fires) in order to diminish it is a misconception that can put the system in danger (by increasing the collapse probability). This is because fuel accumulates and allows a large fire to occur. Following the same idea, fuel removal seems to be one of the best strategies to secure forest health. We also consider the effect of droughts, which are of high interest in recent times, which appear to lead to dramatic consequences, mainly increasing the risk to collapse.
+
+%\paragraph{} % Opening, here on in discussion 
+%The literature about early warning signal is quite extensive, and interdisciplinary. However, most of the methods used are based on the same mathematical phenomena, a bifurcation. For system, like the present one, who do not bifurcate to have substantial change, it appears that new methods need to be constructed.
+ 
+
 
 
 %\subsection*{Synthesis}

@@ -139,11 +139,11 @@ University : INSA Toulouse \footnote{135, Avenue de Rangueil 31077 Toulouse Cede
 
 
 
-\newpage
+%\newpage
 
-\listoftables
+%\listoftables
 
-\listofalgorithms
+%\listofalgorithms
 
 
 
@@ -418,7 +418,7 @@ We can remark that, with the absence of fire events, we have a \hyperref[equi]{b
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Measures %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+%\newpage
 \subsection{Measures}
 
 
@@ -734,13 +734,13 @@ For the first equation (for $N$) we have a collapse only if
 Thus, if this condition is not respected (in practice when $\beta$ is high enough) it is impossible to have a collapse. We can see below  an example when the lack of $W$ prevent the collapse of the forest.
 
 
-\newpage
 \begin{figure}[h!]
 \centering
-\includegraphics[width=12cm]{return_never_1.png}
+\includegraphics[width=11cm]{return_never_1.png}
 \caption{For this set of parameter, even for a strong fire, fuel is too low to maintain a fire able to collapse the system}
 %\label{fig:universe}
 \end{figure}
+
 
 \paragraph{}
 In conclusion, the second axis is constructed by the severity of the fire compared to others parameters, 
@@ -820,7 +820,9 @@ Below are presented several time series for each subcases, in order to give an i
 \end{figure}
 
 
+\newpage
 \subsubsection{Accumulation VS depletion}
+
 
 \paragraph{}
 Indeed, the two previously defined axes could help to distinguish typical dynamical cases. We choose two separate the first axes in three part, by using two threshold ($0.5$ and $20$) for the value of the ratio \textit{AB}. The first part correspond to the cases when fuel accumulate a lot. In this case, fuel have usually time to come back at equilibrium ($W^{eq}=\frac{m}{d}$) before another fire occurs.
@@ -860,6 +862,8 @@ Between the two previous cases, we define a third cases called \textit{fluctuati
 \end{figure}
 
 
+
+\newpage
 \paragraph{}
 In order to visualise the limit of each cases, examples for each limits are presented.
 For the limit between \textit{accumulation} and \textit{fluctuation} we could see that a fire often occur before the dynamics come back to equilibrium. For the second one, we see that fuel is quite low, but could sometimes take relatively high value.
@@ -1781,7 +1785,7 @@ dt = \min(0.1, \frac{0.1}{frequency})
 Same as the time step, the choice of the final time of the study is a compromised between the time needed to resolve the system (linear to the final time) and the robustness of the numerical approximation. In particular, because the model used stochastic events it is important to simulate for a long enough time in order to have a correct approximations of the variability.
 Also, we can remark that the final time change the value of the collapse probability (more we wait, more the system risk to collapse). However, the choice of final time do not affect the collapse probability by time units.
 
-\todo{plot evolution des measures VS time study, on doir voir une oscillation qui converge, pour var et cp by time units et une augmentation de cp}
+%\todo{plot evolution des measures VS time study, on doir voir une oscillation qui converge, pour var et cp by time units et une augmentation de cp}
 
 \newpage
 \section{Average estimation}
